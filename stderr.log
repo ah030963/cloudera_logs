@@ -1,0 +1,1708 @@
++ date
++ date
+Fri Jan 22 14:05:10 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Fri Jan 22 19:01:56 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Fri Jan 22 20:42:39 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Fri Jan 22 20:43:19 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Fri Jan 22 22:04:08 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Fri Jan 22 23:44:41 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Sat Jan 23 01:25:10 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Sat Jan 23 06:49:33 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Sat Jan 23 13:05:47 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Sat Jan 23 13:06:19 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Sat Jan 23 13:06:50 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Sun Jan 24 03:32:20 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Sun Jan 24 05:18:34 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Sun Jan 24 05:19:02 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Mon Jan 25 07:12:34 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Mon Jan 25 08:53:06 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Mon Jan 25 20:43:35 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Mon Jan 25 20:44:17 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Mon Jan 25 22:07:26 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Mon Jan 25 22:07:57 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Tue Jan 26 01:33:16 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Tue Jan 26 08:33:45 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Tue Jan 26 11:44:15 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Tue Jan 26 16:30:55 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Tue Jan 26 16:31:27 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Tue Jan 26 19:21:39 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Wed Jan 27 01:02:09 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ date
++ date
+Wed Jan 27 03:56:58 CST 2016
++ umask 027
++ BASE_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC '
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true'
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
++ MGMT_HOME_ARG_NAME=--mgmt-home
+++ dirname /usr/lib64/cmf/service/mgmt/mgmt.sh
++ cloudera_config=/usr/lib64/cmf/service/mgmt
+++ cd /usr/lib64/cmf/service/mgmt/../common
+++ pwd
++ cloudera_config=/usr/lib64/cmf/service/common
++ . /usr/lib64/cmf/service/common/cloudera-config.sh
+++ set -x
++ locate_java_home
++ JAVA6_HOME_CANDIDATES=('/usr/lib/j2sdk1.6-sun' '/usr/lib/jvm/java-6-sun' '/usr/lib/jvm/java-1.6.0-sun-1.6.0' '/usr/lib/jvm/j2sdk1.6-oracle' '/usr/lib/jvm/j2sdk1.6-oracle/jre' '/usr/java/jdk1.6' '/usr/java/jre1.6')
++ local JAVA6_HOME_CANDIDATES
++ OPENJAVA6_HOME_CANDIDATES=('/usr/lib/jvm/java-1.6.0-openjdk' '/usr/lib/jvm/jre-1.6.0-openjdk')
++ local OPENJAVA6_HOME_CANDIDATES
++ JAVA7_HOME_CANDIDATES=('/usr/java/jdk1.7' '/usr/java/jre1.7' '/usr/lib/jvm/j2sdk1.7-oracle' '/usr/lib/jvm/j2sdk1.7-oracle/jre' '/usr/lib/jvm/java-7-oracle')
++ local JAVA7_HOME_CANDIDATES
++ OPENJAVA7_HOME_CANDIDATES=('/usr/lib/jvm/java-1.7.0-openjdk' '/usr/lib/jvm/java-7-openjdk')
++ local OPENJAVA7_HOME_CANDIDATES
++ JAVA8_HOME_CANDIDATES=('/usr/java/jdk1.8' '/usr/java/jre1.8' '/usr/lib/jvm/j2sdk1.8-oracle' '/usr/lib/jvm/j2sdk1.8-oracle/jre' '/usr/lib/jvm/java-8-oracle')
++ local JAVA8_HOME_CANDIDATES
++ OPENJAVA8_HOME_CANDIDATES=('/usr/lib/jvm/java-1.8.0-openjdk' '/usr/lib/jvm/java-8-openjdk')
++ local OPENJAVA8_HOME_CANDIDATES
++ MISCJAVA_HOME_CANDIDATES=('/Library/Java/Home' '/usr/java/default' '/usr/lib/jvm/default-java' '/usr/lib/jvm/java-openjdk' '/usr/lib/jvm/jre-openjdk')
++ local MISCJAVA_HOME_CANDIDATES
++ case ${BIGTOP_JAVA_MAJOR} in
++ JAVA_HOME_CANDIDATES=(${JAVA7_HOME_CANDIDATES[@]} ${JAVA6_HOME_CANDIDATES[@]} ${JAVA8_HOME_CANDIDATES[@]} ${MISCJAVA_HOME_CANDIDATES[@]} ${OPENJAVA7_HOME_CANDIDATES[@]} ${OPENJAVA6_HOME_CANDIDATES[@]} ${OPENJAVA8_HOME_CANDIDATES[@]})
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ source_parcel_environment
++ '[' '!' -z '' ']'
++ '[' /usr/lib/jvm/java '!=' '' ']'
++ JAVA=/usr/lib/jvm/java/bin/java
++ [[ -n /usr/share/cmf ]]
++ MGMT_CLASSPATH='/usr/share/cmf/lib/*'
++ [[ -z /usr/share/cmf/lib/* ]]
++ JDBC_JARS=/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar
++ MGMT_CLASSPATH='/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ DDL_DIR=/usr/share/cmf/schema
++ [[ firehose == \f\i\r\e\h\o\s\e ]]
++ shift
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema'
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ SERVICE_MONITORING ]]
++ [[ --pipeline-type HOST_MONITORING =~ HOST_MONITORING ]]
+++ pwd
++ MGMT_JAVA_OPTS='-server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC  -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR'
+++ pwd
++ MGMT_CLASSPATH='/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*'
++ echo_and_exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ echo 'Executing: /usr/lib/jvm/java/bin/java' -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
++ exec /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt1-HOSTMONITOR-42334cc3-0eb5-9cfc-f65d-0b4cc67ad682.spherestage-kc.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfirehose.schema.dir=/usr/share/cmf/schema -Dlibrary.leveldbjni.path=/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR -Xms2147483648 -Xmx2147483648 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp '/var/run/cloudera-scm-agent/process/38357-cloudera-mgmt-HOSTMONITOR:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/*' com.cloudera.cmon.firehose.Main --pipeline-type HOST_MONITORING --mgmt-home /usr/share/cmf
