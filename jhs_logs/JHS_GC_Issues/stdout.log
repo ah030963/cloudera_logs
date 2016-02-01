@@ -1,0 +1,11 @@
+Fri Jan 22 14:28:48 CST 2016
+JAVA_HOME=/usr/lib/jvm/java
+using /usr/lib/jvm/java as JAVA_HOME
+using 5 as CDH_VERSION
+using /opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-yarn as CDH_YARN_HOME
+using /opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-mapreduce as CDH_MR2_HOME
+using /var/run/cloudera-scm-agent/process/228209-yarn-JOBHISTORY as CONF_DIR
+#
+# java.lang.OutOfMemoryError: Java heap space
+# -XX:OnOutOfMemoryError="/usr/lib64/cmf/service/common/killparent.sh"
+#   Executing /bin/sh -c "/usr/lib64/cmf/service/common/killparent.sh"...

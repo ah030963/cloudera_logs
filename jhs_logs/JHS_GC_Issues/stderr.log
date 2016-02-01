@@ -1,0 +1,386 @@
+Fri Jan 22 14:28:48 CST 2016
++ source_parcel_environment
++ '[' '!' -z /opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/meta/cdh_env.sh:/opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/meta/hadoop_lzo_env.sh ']'
++ OLD_IFS=' 	
+'
++ IFS=:
++ SCRIPT_ARRAY=($SCM_DEFINES_SCRIPTS)
++ DIRNAME_ARRAY=($PARCEL_DIRNAMES)
++ IFS=' 	
+'
++ COUNT=2
+++ seq 1 2
++ for i in '`seq 1 $COUNT`'
++ SCRIPT=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/meta/cdh_env.sh
++ PARCEL_DIRNAME=CDH-5.4.5-1.cdh5.4.5.p0.7
++ . /opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/meta/cdh_env.sh
+++ CDH_DIRNAME=CDH-5.4.5-1.cdh5.4.5.p0.7
+++ export CDH_HADOOP_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop
+++ CDH_HADOOP_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop
+++ export CDH_MR1_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-0.20-mapreduce
+++ CDH_MR1_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-0.20-mapreduce
+++ export CDH_HDFS_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-hdfs
+++ CDH_HDFS_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-hdfs
+++ export CDH_HTTPFS_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-httpfs
+++ CDH_HTTPFS_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-httpfs
+++ export CDH_MR2_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-mapreduce
+++ CDH_MR2_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-mapreduce
+++ export CDH_YARN_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-yarn
+++ CDH_YARN_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-yarn
+++ export CDH_HBASE_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hbase
+++ CDH_HBASE_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hbase
+++ export CDH_ZOOKEEPER_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/zookeeper
+++ CDH_ZOOKEEPER_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/zookeeper
+++ export CDH_HIVE_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hive
+++ CDH_HIVE_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hive
+++ export CDH_HUE_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hue
+++ CDH_HUE_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hue
+++ export CDH_OOZIE_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/oozie
+++ CDH_OOZIE_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/oozie
+++ export CDH_HUE_PLUGINS_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop
+++ CDH_HUE_PLUGINS_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop
+++ export CDH_FLUME_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/flume-ng
+++ CDH_FLUME_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/flume-ng
+++ export CDH_PIG_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/pig
+++ CDH_PIG_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/pig
+++ export CDH_HCAT_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hive-hcatalog
+++ CDH_HCAT_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hive-hcatalog
+++ export CDH_SQOOP2_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/sqoop2
+++ CDH_SQOOP2_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/sqoop2
+++ export CDH_LLAMA_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/llama
+++ CDH_LLAMA_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/llama
+++ export CDH_SENTRY_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/sentry
+++ CDH_SENTRY_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/sentry
+++ export TOMCAT_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/bigtop-tomcat
+++ TOMCAT_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/bigtop-tomcat
+++ export JSVC_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/bigtop-utils
+++ JSVC_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/bigtop-utils
+++ export CDH_HADOOP_BIN=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop/bin/hadoop
+++ CDH_HADOOP_BIN=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop/bin/hadoop
+++ export CDH_IMPALA_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/impala
+++ CDH_IMPALA_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/impala
+++ export CDH_SOLR_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/solr
+++ CDH_SOLR_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/solr
+++ export CDH_HBASE_INDEXER_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hbase-solr
+++ CDH_HBASE_INDEXER_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hbase-solr
+++ export SEARCH_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/search
+++ SEARCH_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/search
+++ export CDH_SPARK_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/spark
+++ CDH_SPARK_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/spark
+++ export WEBHCAT_DEFAULT_XML=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/etc/hive-webhcat/conf.dist/webhcat-default.xml
+++ WEBHCAT_DEFAULT_XML=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/etc/hive-webhcat/conf.dist/webhcat-default.xml
+++ export CDH_KMS_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-kms
+++ CDH_KMS_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-kms
++ for i in '`seq 1 $COUNT`'
++ SCRIPT=/opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/meta/hadoop_lzo_env.sh
++ PARCEL_DIRNAME=HADOOP_LZO-0.4.15-1.gplextras.p0.134
++ . /opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/meta/hadoop_lzo_env.sh
+++ HADOOP_LZO_DIRNAME=HADOOP_LZO-0.4.15-1.gplextras.p0.134
+++ '[' -n '' ']'
+++ export 'HADOOP_CLASSPATH=/opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/hadoop/lib/*'
+++ HADOOP_CLASSPATH='/opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/hadoop/lib/*'
+++ '[' -n '' ']'
+++ export 'HBASE_CLASSPATH=/opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/hadoop/lib/*'
+++ HBASE_CLASSPATH='/opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/hadoop/lib/*'
+++ '[' -n '' ']'
+++ export 'FLUME_CLASSPATH=/opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/hadoop/lib/*'
+++ FLUME_CLASSPATH='/opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/hadoop/lib/*'
+++ '[' -n '' ']'
+++ export JAVA_LIBRARY_PATH=/opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/hadoop/lib/native
+++ JAVA_LIBRARY_PATH=/opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/hadoop/lib/native
+++ '[' -n '' ']'
+++ export LD_LIBRARY_PATH=/opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/impala/lib
+++ LD_LIBRARY_PATH=/opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/impala/lib
++ locate_cdh_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ verify_java_home
++ '[' -z /usr/lib/jvm/java ']'
++ echo JAVA_HOME=/usr/lib/jvm/java
++ . /usr/lib64/cmf/service/common/cdh-default-hadoop
+++ [[ -z 5 ]]
+++ '[' 5 = 3 ']'
+++ '[' 5 = -3 ']'
+++ '[' 5 -ge 4 ']'
+++ export HADOOP_HOME_WARN_SUPPRESS=true
+++ HADOOP_HOME_WARN_SUPPRESS=true
+++ export HADOOP_PREFIX=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop
+++ HADOOP_PREFIX=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop
+++ export HADOOP_LIBEXEC_DIR=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop/libexec
+++ HADOOP_LIBEXEC_DIR=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop/libexec
+++ export HADOOP_CONF_DIR=/var/run/cloudera-scm-agent/process/228209-yarn-JOBHISTORY
+++ HADOOP_CONF_DIR=/var/run/cloudera-scm-agent/process/228209-yarn-JOBHISTORY
+++ export HADOOP_COMMON_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop
+++ HADOOP_COMMON_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop
+++ export HADOOP_HDFS_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-hdfs
+++ HADOOP_HDFS_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-hdfs
+++ export HADOOP_MAPRED_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-mapreduce
+++ HADOOP_MAPRED_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-mapreduce
+++ '[' 5 = 4 ']'
+++ '[' 5 = 5 ']'
+++ export HADOOP_YARN_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-yarn
+++ HADOOP_YARN_HOME=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-yarn
++ echo 'using /usr/lib/jvm/java as JAVA_HOME'
++ echo 'using 5 as CDH_VERSION'
++ echo 'using /opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-yarn as CDH_YARN_HOME'
++ echo 'using /opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-mapreduce as CDH_MR2_HOME'
++ echo 'using /var/run/cloudera-scm-agent/process/228209-yarn-JOBHISTORY as CONF_DIR'
++ export YARN_CONF_DIR=/var/run/cloudera-scm-agent/process/228209-yarn-JOBHISTORY
++ YARN_CONF_DIR=/var/run/cloudera-scm-agent/process/228209-yarn-JOBHISTORY
++ YARN=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-yarn/bin/yarn
++ set_hadoop_classpath
++ set_classpath_in_var HADOOP_CLASSPATH
++ '[' -z HADOOP_CLASSPATH ']'
++ '[' /usr/share/cmf ']'
++ local INCLUDE_CDH_DIR=
++ '[' 5 ']'
++ INCLUDE_CDH_DIR=/usr/share/cmf/lib/plugins/cdh5
++ '[' 5 == 5 ']'
++ local JAVA_MAJOR_VERSION=
++ get_java_major_version JAVA_MAJOR_VERSION
++ '[' -z /usr/lib/jvm/java/bin/java ']'
+++ /usr/lib/jvm/java/bin/java -version
++ local 'VERSION_STRING=java version "1.8.0_45"
+Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)'
++ local 'RE_JAVA=[java|openjdk][[:space:]]version[[:space:]]\"1\.([0-9][0-9]*)\.+'
++ [[ java version "1.8.0_45"
+Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode) =~ [java|openjdk][[:space:]]version[[:space:]]\"1\.([0-9][0-9]*)\.+ ]]
++ eval JAVA_MAJOR_VERSION=8
+++ JAVA_MAJOR_VERSION=8
++ '[' 8 == 6 ']'
+++ find /usr/share/cmf/lib/plugins /usr/share/cmf/lib/plugins/cdh5 -maxdepth 1 -name '*.jar'
+++ tr '\n' :
++ ADD_TO_CP=/usr/share/cmf/lib/plugins/tt-instrumentation-5.4.1.jar:/usr/share/cmf/lib/plugins/event-publish-5.4.1-shaded.jar:/usr/share/cmf/lib/plugins/cdh5/audit-plugin-cdh5-2.3.1-shaded.jar:
++ ADD_TO_CP=/usr/share/cmf/lib/plugins/tt-instrumentation-5.4.1.jar:/usr/share/cmf/lib/plugins/event-publish-5.4.1-shaded.jar:/usr/share/cmf/lib/plugins/cdh5/audit-plugin-cdh5-2.3.1-shaded.jar
++ eval 'OLD_VALUE=$HADOOP_CLASSPATH'
+++ OLD_VALUE='/opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/hadoop/lib/*'
++ '[' -z /opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/hadoop/lib/COPYING.hadoop-lzo-cdh4 /opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/hadoop/lib/hadoop-lzo-cdh4-0.4.15-gplextras.jar /opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/hadoop/lib/native ']'
+/usr/lib64/cmf/service/common/cloudera-config.sh: line 262: [: too many arguments
++ export 'HADOOP_CLASSPATH=/usr/share/cmf/lib/plugins/tt-instrumentation-5.4.1.jar:/usr/share/cmf/lib/plugins/event-publish-5.4.1-shaded.jar:/usr/share/cmf/lib/plugins/cdh5/audit-plugin-cdh5-2.3.1-shaded.jar:/opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/hadoop/lib/*'
++ HADOOP_CLASSPATH='/usr/share/cmf/lib/plugins/tt-instrumentation-5.4.1.jar:/usr/share/cmf/lib/plugins/event-publish-5.4.1-shaded.jar:/usr/share/cmf/lib/plugins/cdh5/audit-plugin-cdh5-2.3.1-shaded.jar:/opt/cloudera/parcels/HADOOP_LZO-0.4.15-1.gplextras.p0.134/lib/hadoop/lib/*'
++ set -x
++ replace_conf_dir
++ find /var/run/cloudera-scm-agent/process/228209-yarn-JOBHISTORY -name '*.xml' -exec perl -pi -e 's#{{CMF_CONF_DIR}}#/var/run/cloudera-scm-agent/process/228209-yarn-JOBHISTORY#g' '{}' ';'
++ find /var/run/cloudera-scm-agent/process/228209-yarn-JOBHISTORY -name '*log4j.properties' -exec perl -pi -e 's#{{CMF_CONF_DIR}}#/var/run/cloudera-scm-agent/process/228209-yarn-JOBHISTORY#g' '{}' ';'
++ find /var/run/cloudera-scm-agent/process/228209-yarn-JOBHISTORY -name topology.py -exec perl -pi -e 's#{{CMF_CONF_DIR}}#/var/run/cloudera-scm-agent/process/228209-yarn-JOBHISTORY#g' '{}' ';'
++ '[' -e /var/run/cloudera-scm-agent/process/228209-yarn-JOBHISTORY/topology.py ']'
++ export 'YARN_OPTS=-Djava.net.preferIPv4Stack=true '
++ YARN_OPTS='-Djava.net.preferIPv4Stack=true '
++ acquire_kerberos_tgt yarn.keytab
++ '[' -z yarn.keytab ']'
++ '[' -n '' ']'
++ '[' historyserver = RefreshQueuesAndNodes ']'
++ '[' historyserver = historyserver ']'
++ MAPRED=/opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-mapreduce/bin/mapred
++ exec /opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-mapreduce/bin/mapred historyserver
+Jan 22, 2016 2:29:10 PM com.google.inject.servlet.InternalServletModule$BackwardsCompatibleServletContextProvider get
+WARNING: You are attempting to use a deprecated API (specifically, attempting to @Inject ServletContext inside an eagerly created singleton. While we allow this for backwards compatibility, be warned that this MAY have unexpected behavior if you have more than one injector (with ServletModule) running in the same JVM. Please consult the Guice documentation at http://code.google.com/p/google-guice/wiki/Servlets for more information.
+Jan 22, 2016 2:29:10 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.mapreduce.v2.hs.webapp.HsWebServices as a root resource class
+Jan 22, 2016 2:29:10 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.mapreduce.v2.hs.webapp.JAXBContextResolver as a provider class
+Jan 22, 2016 2:29:10 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.webapp.GenericExceptionHandler as a provider class
+Jan 22, 2016 2:29:10 PM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'
+Jan 22, 2016 2:29:10 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.mapreduce.v2.hs.webapp.JAXBContextResolver to GuiceManagedComponentProvider with the scope "Singleton"
+Jan 22, 2016 2:29:10 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.webapp.GenericExceptionHandler to GuiceManagedComponentProvider with the scope "Singleton"
+Jan 22, 2016 2:29:11 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.mapreduce.v2.hs.webapp.HsWebServices to GuiceManagedComponentProvider with the scope "PerRequest"
+Jan 25, 2016 10:12:15 PM com.sun.jersey.json.impl.writer.Stax2JacksonWriter writeCharacters
+SEVERE: null
+org.mortbay.jetty.EofException
+	at org.mortbay.jetty.HttpGenerator.flush(HttpGenerator.java:791)
+	at org.mortbay.jetty.AbstractGenerator$Output.blockForOutput(AbstractGenerator.java:551)
+	at org.mortbay.jetty.AbstractGenerator$Output.flush(AbstractGenerator.java:572)
+	at org.mortbay.jetty.HttpConnection$Output.flush(HttpConnection.java:1012)
+	at org.mortbay.jetty.AbstractGenerator$Output.write(AbstractGenerator.java:651)
+	at org.mortbay.jetty.AbstractGenerator$Output.write(AbstractGenerator.java:580)
+	at com.sun.jersey.spi.container.servlet.WebComponent$Writer.write(WebComponent.java:307)
+	at com.sun.jersey.spi.container.ContainerResponse$CommittingOutputStream.write(ContainerResponse.java:134)
+	at sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:221)
+	at sun.nio.cs.StreamEncoder.implWrite(StreamEncoder.java:282)
+	at sun.nio.cs.StreamEncoder.write(StreamEncoder.java:125)
+	at java.io.OutputStreamWriter.write(OutputStreamWriter.java:207)
+	at org.codehaus.jackson.impl.WriterBasedGenerator._flushBuffer(WriterBasedGenerator.java:1812)
+	at org.codehaus.jackson.impl.WriterBasedGenerator._writeString(WriterBasedGenerator.java:987)
+	at org.codehaus.jackson.impl.WriterBasedGenerator.writeString(WriterBasedGenerator.java:448)
+	at com.sun.jersey.json.impl.writer.JacksonStringMergingGenerator.writeString(JacksonStringMergingGenerator.java:145)
+	at com.sun.jersey.json.impl.writer.Stax2JacksonWriter.writeCharacters(Stax2JacksonWriter.java:465)
+	at com.sun.jersey.json.impl.writer.Stax2JacksonWriter.writeCharacters(Stax2JacksonWriter.java:482)
+	at com.sun.xml.bind.v2.runtime.output.XMLStreamWriterOutput.text(XMLStreamWriterOutput.java:155)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.text(XMLSerializer.java:410)
+	at com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$StringImplImpl.writeText(RuntimeBuiltinLeafInfoImpl.java:1040)
+	at com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$StringImplImpl.writeText(RuntimeBuiltinLeafInfoImpl.java:1024)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementLeafProperty.serializeItem(ArrayElementLeafProperty.java:86)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.serializeListBody(ArrayElementProperty.java:172)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.serializeBody(ArrayERProperty.java:159)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeBody(ClassBeanInfoImpl.java:344)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsXsiType(XMLSerializer.java:700)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.serializeItem(ArrayElementNodeProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.serializeListBody(ArrayElementProperty.java:172)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.serializeBody(ArrayERProperty.java:159)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeBody(ClassBeanInfoImpl.java:344)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsSoleContent(XMLSerializer.java:597)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeRoot(ClassBeanInfoImpl.java:328)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:498)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:320)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:177)
+	at com.sun.jersey.json.impl.BaseJSONMarshaller.marshallToJSON(BaseJSONMarshaller.java:103)
+	at com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider.writeTo(JSONRootElementProvider.java:136)
+	at com.sun.jersey.core.provider.jaxb.AbstractRootElementProvider.writeTo(AbstractRootElementProvider.java:157)
+	at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1437)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1349)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1339)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:886)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:834)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:795)
+	at com.google.inject.servlet.FilterDefinition.doFilter(FilterDefinition.java:163)
+	at com.google.inject.servlet.FilterChainInvocation.doFilter(FilterChainInvocation.java:58)
+	at com.google.inject.servlet.ManagedFilterPipeline.dispatch(ManagedFilterPipeline.java:118)
+	at com.google.inject.servlet.GuiceFilter.doFilter(GuiceFilter.java:113)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter.doFilter(StaticUserWebFilter.java:109)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.HttpServer2$QuotingInputFilter.doFilter(HttpServer2.java:1225)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.NoCacheFilter.doFilter(NoCacheFilter.java:45)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.NoCacheFilter.doFilter(NoCacheFilter.java:45)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:767)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.mortbay.io.nio.ChannelEndPoint.flush(ChannelEndPoint.java:171)
+	at org.mortbay.io.nio.SelectChannelEndPoint.flush(SelectChannelEndPoint.java:221)
+	at org.mortbay.jetty.HttpGenerator.flush(HttpGenerator.java:725)
+	... 75 more
+
+Jan 25, 2016 10:12:15 PM com.sun.jersey.server.impl.application.WebApplicationImpl _handleRequest
+SEVERE: The response of the WebApplicationException cannot be utilized as the response is already committed. Re-throwing to the HTTP container
+javax.ws.rs.WebApplicationException: javax.xml.bind.MarshalException
+ - with linked exception:
+[javax.xml.stream.XMLStreamException: org.mortbay.jetty.EofException]
+	at com.sun.jersey.core.provider.jaxb.AbstractRootElementProvider.writeTo(AbstractRootElementProvider.java:159)
+	at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1437)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1349)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1339)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:886)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:834)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:795)
+	at com.google.inject.servlet.FilterDefinition.doFilter(FilterDefinition.java:163)
+	at com.google.inject.servlet.FilterChainInvocation.doFilter(FilterChainInvocation.java:58)
+	at com.google.inject.servlet.ManagedFilterPipeline.dispatch(ManagedFilterPipeline.java:118)
+	at com.google.inject.servlet.GuiceFilter.doFilter(GuiceFilter.java:113)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter.doFilter(StaticUserWebFilter.java:109)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.HttpServer2$QuotingInputFilter.doFilter(HttpServer2.java:1225)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.NoCacheFilter.doFilter(NoCacheFilter.java:45)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.NoCacheFilter.doFilter(NoCacheFilter.java:45)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:767)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: javax.xml.bind.MarshalException
+ - with linked exception:
+[javax.xml.stream.XMLStreamException: org.mortbay.jetty.EofException]
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:327)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:177)
+	at com.sun.jersey.json.impl.BaseJSONMarshaller.marshallToJSON(BaseJSONMarshaller.java:103)
+	at com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider.writeTo(JSONRootElementProvider.java:136)
+	at com.sun.jersey.core.provider.jaxb.AbstractRootElementProvider.writeTo(AbstractRootElementProvider.java:157)
+	... 37 more
+Caused by: javax.xml.stream.XMLStreamException: org.mortbay.jetty.EofException
+	at com.sun.jersey.json.impl.writer.Stax2JacksonWriter.writeCharacters(Stax2JacksonWriter.java:476)
+	at com.sun.jersey.json.impl.writer.Stax2JacksonWriter.writeCharacters(Stax2JacksonWriter.java:482)
+	at com.sun.xml.bind.v2.runtime.output.XMLStreamWriterOutput.text(XMLStreamWriterOutput.java:155)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.text(XMLSerializer.java:410)
+	at com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$StringImplImpl.writeText(RuntimeBuiltinLeafInfoImpl.java:1040)
+	at com.sun.xml.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl$StringImplImpl.writeText(RuntimeBuiltinLeafInfoImpl.java:1024)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementLeafProperty.serializeItem(ArrayElementLeafProperty.java:86)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.serializeListBody(ArrayElementProperty.java:172)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.serializeBody(ArrayERProperty.java:159)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeBody(ClassBeanInfoImpl.java:344)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsXsiType(XMLSerializer.java:700)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.serializeItem(ArrayElementNodeProperty.java:69)
+	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.serializeListBody(ArrayElementProperty.java:172)
+	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.serializeBody(ArrayERProperty.java:159)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeBody(ClassBeanInfoImpl.java:344)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsSoleContent(XMLSerializer.java:597)
+	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeRoot(ClassBeanInfoImpl.java:328)
+	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:498)
+	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:320)
+	... 41 more
+Caused by: org.mortbay.jetty.EofException
+	at org.mortbay.jetty.HttpGenerator.flush(HttpGenerator.java:791)
+	at org.mortbay.jetty.AbstractGenerator$Output.blockForOutput(AbstractGenerator.java:551)
+	at org.mortbay.jetty.AbstractGenerator$Output.flush(AbstractGenerator.java:572)
+	at org.mortbay.jetty.HttpConnection$Output.flush(HttpConnection.java:1012)
+	at org.mortbay.jetty.AbstractGenerator$Output.write(AbstractGenerator.java:651)
+	at org.mortbay.jetty.AbstractGenerator$Output.write(AbstractGenerator.java:580)
+	at com.sun.jersey.spi.container.servlet.WebComponent$Writer.write(WebComponent.java:307)
+	at com.sun.jersey.spi.container.ContainerResponse$CommittingOutputStream.write(ContainerResponse.java:134)
+	at sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:221)
+	at sun.nio.cs.StreamEncoder.implWrite(StreamEncoder.java:282)
+	at sun.nio.cs.StreamEncoder.write(StreamEncoder.java:125)
+	at java.io.OutputStreamWriter.write(OutputStreamWriter.java:207)
+	at org.codehaus.jackson.impl.WriterBasedGenerator._flushBuffer(WriterBasedGenerator.java:1812)
+	at org.codehaus.jackson.impl.WriterBasedGenerator._writeString(WriterBasedGenerator.java:987)
+	at org.codehaus.jackson.impl.WriterBasedGenerator.writeString(WriterBasedGenerator.java:448)
+	at com.sun.jersey.json.impl.writer.JacksonStringMergingGenerator.writeString(JacksonStringMergingGenerator.java:145)
+	at com.sun.jersey.json.impl.writer.Stax2JacksonWriter.writeCharacters(Stax2JacksonWriter.java:465)
+	... 59 more
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.mortbay.io.nio.ChannelEndPoint.flush(ChannelEndPoint.java:171)
+	at org.mortbay.io.nio.SelectChannelEndPoint.flush(SelectChannelEndPoint.java:221)
+	at org.mortbay.jetty.HttpGenerator.flush(HttpGenerator.java:725)
+	... 75 more
+
++ kill -9 1119510
