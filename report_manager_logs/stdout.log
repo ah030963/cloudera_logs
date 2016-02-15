@@ -1,0 +1,7 @@
+Fri Feb  5 09:26:52 CST 2016
+JAVA_HOME=/usr/lib/jvm/java
+Executing: /usr/lib/jvm/java/bin/java -server -XX:+UseConcMarkSweepGC -XX:-CMSConcurrentMTEnabled -XX:+UseParNewGC -Dmgmt.log.file=mgmt-cmf-mgmt-REPORTSMANAGER-42342947-d052-9d13-8315-7a360d25133f.cernersphere-ls.net.log.out -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dheadlamp.schema.dir=/usr/share/cmf/schema -Xms10737418240 -Xmx10737418240 -XX:OnOutOfMemoryError=/usr/lib64/cmf/service/common/killparent.sh -cp /var/run/cloudera-scm-agent/process/8865-cloudera-mgmt-REPORTSMANAGER:/usr/share/java/mysql-connector-java.jar:/usr/share/cmf/lib/postgresql-9.0-801.jdbc4.jar:/usr/share/java/oracle-connector-java.jar:/usr/share/cmf/lib/* com.cloudera.headlamp.HeadlampServer --db-conf-dir /var/run/cloudera-scm-agent/process/8865-cloudera-mgmt-REPORTSMANAGER --db-conf-file headlamp.db.properties --mgmt-home /usr/share/cmf
+#
+# java.lang.OutOfMemoryError: Java heap space
+# -XX:OnOutOfMemoryError="/usr/lib64/cmf/service/common/killparent.sh"
+#   Executing /bin/sh -c "/usr/lib64/cmf/service/common/killparent.sh"...
